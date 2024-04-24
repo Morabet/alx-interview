@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Task """
 
 
 def isPrime(n: int) -> bool:
