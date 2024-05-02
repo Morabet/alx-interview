@@ -28,12 +28,14 @@ try:
             i += 1
 
             if i == 10:
-                print(f'File size: {total_size}')
+                print('File size: {}'.format(total_size))
                 for code in sorted(codes.keys()):
-                    print(f'{code}: {codes[code]}')
+                    if codes[code] != 0:
+                        print('{}: {}'.format(code, codes[code]))
                 i = 0
 
 except KeyboardInterrupt:
-    print(f'File size: {total_size}')
+    print('File size: {}'.format(total_size))
     for code in sorted(codes.keys()):
-        print(f'{code}: {codes[code]}')
+        if codes[code] != 0:
+            print('{}: {}'.format(code, codes[code]))
