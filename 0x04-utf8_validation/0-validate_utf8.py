@@ -12,5 +12,11 @@ def validUTF8(data):
             return False
         if len_bits > 8 and bin_num[-8:-6] != "10":
             return False
+        if len_bits > 16 and bin_num[-16:-14] != "10" and \
+                bin_num[-8:-6] != "10":
+            return False
+        if len_bits > 24 and bin_num[-24:-22] != "10" and \
+                bin_num[-16:-14] != "10" and bin_num[-8:-6] != "10":
+            return False
 
     return True
